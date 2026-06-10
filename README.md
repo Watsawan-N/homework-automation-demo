@@ -77,6 +77,14 @@ npm run test:e2e:headed
 npm run test:e2e:ui
 ```
 
+## วิธี record test ด้วย Playwright Codegen
+
+ถ้าต้องการให้ Playwright เปิด browser แล้วช่วย generate action/locator สำหรับ test ให้ใช้คำสั่งนี้:
+
+```bash
+npx playwright codegen http://localhost:5173
+```
+
 ## วิธีเปิด Playwright report
 
 ```bash

@@ -148,8 +148,18 @@ git commit -m "feat: improve homework automation rules"
 
 1. เข้า repository บน GitHub
 2. ไปที่แท็บ `Actions`
-3. เลือก workflow `CI - Build and Playwright Tests`
+3. เลือก workflow `CI / Deploy GitHub Pages`
 4. ดูผล build, test และ artifact
+
+## วิธีเปิด GitHub Pages deploy
+
+หลังจาก push ขึ้น branch `main` แล้ว ให้ตั้งค่าใน GitHub repository เพิ่มอีก 1 จุด:
+
+1. ไปที่ `Settings`
+2. เลือก `Pages`
+3. ที่ `Source` ให้เลือก `GitHub Actions`
+
+จากนั้น workflow จะ build, รัน Playwright test และ deploy โฟลเดอร์ `dist` ไปที่ GitHub Pages ให้อัตโนมัติเมื่อ push เข้า `main`
 
 ## วิธี download test artifact
 

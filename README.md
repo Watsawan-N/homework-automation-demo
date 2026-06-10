@@ -1,6 +1,6 @@
 # homework-automation-demo
 
-โปรเจกต์นี้เป็นตัวอย่างงานจริงสำหรับสอนนักเรียนเรื่อง Web Automation, GitHub และ CI/CD ผ่านเว็บแอปเล็ก ๆ ชื่อ `Homework Automation Dashboard` ที่เก็บข้อมูลด้วย `localStorage` และทดสอบด้วย Playwright
+โปรเจกต์นี้เป็นตัวอย่างงานจริงเรื่อง Web Automation, GitHub และ CI/CD ผ่านเว็บแอปเล็ก ๆ ชื่อ `Homework Automation Dashboard` ที่เก็บข้อมูลด้วย `localStorage` และทดสอบด้วย Playwright
 
 ## คู่มือฉบับเต็ม
 

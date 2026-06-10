@@ -51,7 +51,7 @@ test('should add a new homework item', async ({ page }) => {
 
 test('should run automation and set high priority for homework due tomorrow', async ({ page }) => {
   await addHomework(page, {
-    title: 'Math practice set',
+    title: 'Math practe set',
     dueDate: createFutureDate(1),
     difficulty: 'Hard',
     estimatedMinutes: '90',
@@ -59,7 +59,7 @@ test('should run automation and set high priority for homework due tomorrow', as
 
   await page.getByTestId('run-automation-button').click();
 
-  const card = page.getByTestId('homework-card').filter({ hasText: 'Math practice set' });
+  const card = page.getByTestId('homework-card').filter({ hasText: 'Math practe set' });
   await expect(card.getByTestId('priority-badge')).toHaveText('High');
   await expect(card.getByTestId('status-badge')).toHaveText('Urgent');
 });

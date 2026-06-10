@@ -59,7 +59,7 @@ test('should run automation and set high priority for homework due tomorrow', as
 
   await page.getByTestId('run-automation-button').click();
 
-  const card = page.getByTestId('homework-card').filter({ hasText: 'Math practe set' });
+  const card = page.getByTestId('homework-card').filter({ hasText: 'Math p=t' });
   await expect(card.getByTestId('priority-badge')).toHaveText('High');
   await expect(card.getByTestId('status-badge')).toHaveText('Urgent');
 });

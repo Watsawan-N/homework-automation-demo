@@ -22,7 +22,7 @@ flowchart LR
   C --> D[Run Playwright Tests]
   D --> E[Artifacts: Report + Trace + Video + Screenshot]
   E --> F[Review Result in GitHub]
-  F --> G[Merge to main]
+  F --> G[Merge to master]
 ```
 
 ---
@@ -138,8 +138,8 @@ npx playwright show-trace path/to/trace.zip
 
 ### เงื่อนไข trigger
 
-- push ที่ `main`
-- pull request เข้า `main`
+- push ที่ `master`
+- pull request เข้า `master`
 - manual run (`workflow_dispatch`)
 
 ### ทำไมต้องอัปโหลด artifact เสมอ (`if: always()`)
@@ -158,7 +158,7 @@ npx playwright show-trace path/to/trace.zip
 ตัวอย่างแนวทาง CD ที่นิยม:
 
 1. Deploy Preview ทุก Pull Request (เช่น Vercel/Netlify)
-2. Deploy Production เมื่อ merge เข้า `main`
+2. Deploy Production เมื่อ merge เข้า `master`
 3. ตั้ง branch protection ให้ต้องผ่าน CI ก่อน merge
 
 แนวปฏิบัติแนะนำ:
@@ -181,9 +181,9 @@ npx playwright show-trace path/to/trace.zip
 git init
 git add .
 git commit -m "feat: initial project setup"
-git branch -M main
+git branch -M master
 git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
-git push -u origin main
+git push -u origin master
 ```
 
 ### 3) ทำงานแบบ branch + PR

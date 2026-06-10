@@ -118,9 +118,9 @@ git log --oneline
 git init
 git add .
 git commit -m "feat: initial project setup"
-git branch -M main
+git branch -M master
 git remote add origin <YOUR_GITHUB_REPOSITORY_URL>
-git push -u origin main
+git push -u origin master
 ```
 
 ## วิธีสร้าง branch
@@ -153,13 +153,13 @@ git commit -m "feat: improve homework automation rules"
 
 ## วิธีเปิด GitHub Pages deploy
 
-หลังจาก push ขึ้น branch `main` แล้ว ให้ตั้งค่าใน GitHub repository เพิ่มอีก 1 จุด:
+หลังจาก push ขึ้น branch `master` แล้ว ให้ตั้งค่าใน GitHub repository เพิ่มอีก 1 จุด:
 
 1. ไปที่ `Settings`
 2. เลือก `Pages`
 3. ที่ `Source` ให้เลือก `GitHub Actions`
 
-จากนั้น workflow จะ build, รัน Playwright test และ deploy โฟลเดอร์ `dist` ไปที่ GitHub Pages ให้อัตโนมัติเมื่อ push เข้า `main`
+จากนั้น workflow จะ build, รัน Playwright test และ deploy โฟลเดอร์ `dist` ไปที่ GitHub Pages ให้อัตโนมัติเมื่อ push เข้า `master`
 
 ## วิธี download test artifact
 

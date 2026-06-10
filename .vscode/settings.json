@@ -1,0 +1,8 @@
+{
+  "playwright.env": {
+    "PATH": "${env:HOME}/.nvm/versions/node/v20.20.2/bin:${env:PATH}"
+  },
+  "terminal.integrated.env.osx": {
+    "PATH": "${env:HOME}/.nvm/versions/node/v20.20.2/bin:${env:PATH}"
+  }
+}

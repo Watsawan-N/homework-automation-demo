@@ -1,0 +1,33 @@
+{
+  "name": "homework-automation-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "check:node": "./scripts/use-project-node.sh node ./scripts/check-node-version.cjs",
+    "setup": "./scripts/use-project-node.sh npm install",
+    "dev": "./scripts/use-project-node.sh vite",
+    "build": "./scripts/use-project-node.sh tsc --noEmit -p tsconfig.app.json && ./scripts/use-project-node.sh tsc --noEmit -p tsconfig.node.json && ./scripts/use-project-node.sh vite build",
+    "preview": "./scripts/use-project-node.sh vite preview",
+    "test:e2e": "./scripts/use-project-node.sh playwright test",
+    "test:e2e:ui": "./scripts/use-project-node.sh playwright test --ui",
+    "test:e2e:headed": "./scripts/use-project-node.sh playwright test --headed",
+    "test:e2e:report": "./scripts/use-project-node.sh playwright show-report playwright-report"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^22.8.7",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

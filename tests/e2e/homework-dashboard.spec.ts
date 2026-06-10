@@ -139,4 +139,17 @@ test('should persist homework after page reload', async ({ page }) => {
 
 test('should display all text', async ({ page }) => {
   await expect(page.getByTestId('app-title')).toHaveText('Homework Automation Dashboard');
+  await page.goto('http://localhost:5175/');
+
+  await page.getByTestId('homework-title-input').click();
+  await page.getByTestId('homework-title-input').fill('test homework');
+  await page.getByTestId('subject-select').selectOption('Science');
+  await page.getByTestId('due-date-input').fill('2026-06-11');
+  await page.getByTestId('difficulty-select').selectOption('Hard');
+  await page.getByTestId('due-date-input').fill('2026-06-27');
+  await page.getByTestId('estimated-minutes-input').click();
+  await page.getByTestId('estimated-minutes-input').dblclick();
+  await page.getByTestId('estimated-minutes-input').fill('50');
+  await page.getByTestId('add-homework-button').click();
+  await page.getByTestId('add-homework-button').click();
 });

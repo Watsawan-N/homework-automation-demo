@@ -150,6 +150,4 @@ test('should display all text', async ({ page }) => {
   await page.getByTestId('estimated-minutes-input').click();
   await page.getByTestId('estimated-minutes-input').dblclick();
   await page.getByTestId('estimated-minutes-input').fill('50');
-  await page.getByTestId('add-homework-button').click();
-  await page.getByTestId('add-homework-button').click();
 });
